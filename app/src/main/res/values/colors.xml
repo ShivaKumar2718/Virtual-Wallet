@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sea_green">#34A853</color>
+    <color name="red">#EA4335</color>
+    <color name="blue">#0074FF</color>
+    <color name="light_green">#6FF192</color>
+    <color name="blue_light_1">#00A3FF</color>
+    <color name="light_blue">#ADD0EF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="forgot_pin_text_color">#CF0E00</color>
+    <color name="dark_orange">#FF5722</color>
+    <color name="light_orange">#F3C581</color>
+    <color name="light_grey">#d2d2d2</color>
+    <color name="dark_grey">#2d2d2d</color>
+    <color name="very_light_green">#EFFFEF</color>
+</resources>

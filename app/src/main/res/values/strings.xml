@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Virtual</string>
+    <string name="Todo">PinView</string>
+    <string name="forgot_pin">Forgot Pin? Reset here…</string>
+    <string name="virtual">Virtual</string>
+    <string name="copyright">Copyright</string>
+    <string name="security_questions_text">Set up 3 security questions</string>
+    <string name="first_question">1. What is the name of your first school?</string>
+    <string name="hint_et">Answer</string>
+    <string name="second_question">2. What was your favourite food as a child?</string>
+    <string name="third_question">3. What is your mother\'s maiden name?</string>
+    <string name="btn_set_up">Set</string>
+    <string name="info_about_sq">These will be used to re-affirm your identity while resetting your 4-digit  PIN. Forgetting of these will lead to loss of your data.</string>
+    <string name="know_the_name">Help us to know your name !</string>
+    <string name="name">Enter your name…</string>
+    <string name="done">Done</string>
+    <string name="enter_pin">Please enter your 4 digit PIN</string>
+    <string name="setup_pin">Please set up your 4 digit PIN</string>
+    <string name="set_pin">Set PIN</string>
+    <string name="confirm_pin">Confirm PIN</string>
+    <string name="confirm_identity">Please confirm your identity</string>
+    <string name="confirm">confirm</string>
+    <string name="try_another_question">Try another question</string>
+    <string name="no_access_to_data">If you have forgotten these, there is no way to access your data further.</string>
+    <string name="proofs_of_identity">Proofs of Identity</string>
+    <string name="debit_cards">Debit Cards</string>
+    <string name="credit_cards">Credit cards</string>
+    <string name="no_cards_to_display">No cards to display</string>
+    <string name="front_side">Front Side</string>
+    <string name="back_side">Back side</string>
+    <string name="filename">filename</string>
+    <string name="save">save</string>
+    <string name="others">Others</string>
+    <string name="add_button">Add Button</string>
+    <string name="privacy_policy">This Privacy Policy is meant to help you understand what
+        information we collect, why we collect it, and how you can update, manage, export, and
+        delete your information.\n\nBefore you submit any information to this application, please
+        read the Privacy Policy of this application so that you can understand how we will treat your information in a secure manner. If you do not agree to this Privacy Policy, please do not use this application. Your use of any part of this application indicates that you are accepting our Privacy Policy.
+    </string>
+    <string name="policy_1">To use this application, users would be required to provide certain
+        information which may include, but not limited to:\n\n      1.Username\n     2.Three
+        Security
+        Questions</string>
+    <string name="privacy_2">We do not knowingly collect or solicit any information from the people who were more than 5 years older.</string>
+    <string name="privacy_3">This application provides the users with the utmost security in such a way that his/her data will not be exposed to any kind of external medium (e.g.: internet). Whatever the data that this application collects will only be available within the user\'s device itself. Also, the application was equipped with 4-digit security PIN which will keep the data safe from others.</string>
+    <string name="privacy_4">Any questions/clarifications with respect to this policy or any complaints, comments, concerns or feedback can be sent to <font color="#0074FF"><u>siva.mal1918@gmail.com</u></font> or by normal/physical mail addressed to:\n\nMarripalli Village, \nPodalakur Mandal, \nNellore District, \nAndhra Pradesh. PIN: 524345.</string>
+    <string name="privacy_policy_btn">privacy_policy</string>
+    <string name="privacy_polic">PRIVACY POLICY</string>
+    <string name="purpose_and_usage">Purpose and Usage:</string>
+    <string name="children_s_privacy">Children\'s Privacy:</string>
+    <string name="security">Security:</string>
+    <string name="contact_us">Contact Us:</string>
+    <string name="no_front_side">No Front Side</string>
+    <string name="no_back_side">No Back Side</string>
+    <string name="screen_faded">screen faded</string>
+    <string name="select_file_type">Select file type</string>
+    <string name="confirm_pin_here">confirm pin here</string>
+    <string name="set_pin_here">set pin here</string>
+    <string name="agree_to_our_privacy_policy">Agree to our <font color="#0074FF"><u>Privacy Policy</u></font></string>
+
+    <string-array name="file_types">
+        <item>Select card type</item>
+        <item>Proof of Identity</item>
+        <item>Debit Card</item>
+        <item>Credit Card</item>
+        <item>Other</item>
+    </string-array>
+</resources>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/nested_scroll_lay"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            tools:context=".UploadImage"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/upload_lay"
+                >
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:contentDescription="@string/select_file_type"
+                    android:layout_marginEnd="20dp" />
+
+                <FrameLayout
+                    android:id="@+id/frame_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/spinner"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/dotted_background">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/sub_child_textview"
+                        android:layout_gravity="center"
+                        android:text="@string/front_side" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/front_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="35dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/camera"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/camera" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/upload"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="15dp"
+                            android:src="@drawable/upload" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/front_side_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/front_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:background="@drawable/white_circle"
+                        android:padding="9dp"
+                        android:src="@drawable/close"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_rotate"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/white_circle"
+                        android:padding="4dp"
+                        android:src="@drawable/rotate_right"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/frame_front"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/dotted_background">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/sub_child_textview"
+                        android:layout_gravity="center"
+                        android:text="@string/back_side" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/back_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="35dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/camera_back"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/camera" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/upload_back"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="15dp"
+                            android:src="@drawable/upload" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/back_side_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/ic_launcher"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/back_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_back_close"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:background="@drawable/white_circle"
+                        android:padding="9dp"
+                        android:src="@drawable/close"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_back_rotate"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/white_circle"
+                        android:padding="4dp"
+                        android:src="@drawable/rotate_right"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_file_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frame_back"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:hint="@string/filename"
+                    android:inputType="text"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textColorHint="#757575" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_save"
+                    style="@style/button_style"
+                    android:layout_below="@+id/et_file_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/button_background"
+                    android:text="@string/save" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <include layout="@layout/error_lay"
+            android:id="@+id/upload_error_lay"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</layout>
