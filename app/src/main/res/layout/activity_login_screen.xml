@@ -1,68 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginScreen">
 
-    <FrameLayout
+    <RelativeLayout
+        android:id="@+id/login_lay"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".LoginScreen">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:id="@+id/login_lay"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/main_textview_style"
+            android:id="@+id/tv1"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/main_textview_style"
-                android:id="@+id/tv1"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentTop="true" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv2"
+            style="@style/child_textview_style"
+            android:layout_below="@+id/tv1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="@string/enter_pin" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv2"
-                style="@style/child_textview_style"
-                android:layout_below="@+id/tv1"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
-                android:text="@string/enter_pin" />
+        <com.chaos.view.PinView
+            android:id="@+id/pinView"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:itemRadius="6dp"
+            android:itemBackground="@color/white"
+            android:inputType="numberPassword"
+            android:textColor="@color/light_grey"
+            app:cursorColor="@color/blue_light_1"
+            android:layout_below="@+id/tv2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            app:lineColor="@color/blue_light_1"
+            app:itemSpacing="20dp" />
 
-            <com.chaos.view.PinView
-                android:id="@+id/pinView"
-                style="@style/PinWidget.PinView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:itemRadius="6dp"
-                android:itemBackground="@color/white"
-                android:inputType="numberPassword"
-                android:textColor="@color/light_grey"
-                app:cursorColor="@color/blue_light_1"
-                android:layout_below="@+id/tv2"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                app:lineColor="@color/blue_light_1"
-                app:itemSpacing="20dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_forgot"
+            style="@style/sub_child_textview"
+            android:layout_below="@+id/pinView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="@string/forgot_pin"
+            android:textColor="#FD0000" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_forgot"
-                style="@style/sub_child_textview"
-                android:layout_below="@+id/pinView"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:minHeight="48dp"
-                android:padding="10dp"
-                android:textStyle="bold"
-                android:text="@string/forgot_pin"
-                android:textColor="#FD0000" />
+    </RelativeLayout>
 
-        </RelativeLayout>
+    <include
+        layout="@layout/error_lay"
+        android:id="@+id/login_error_lay"
+        android:visibility="gone" />
 
-        <include
-            layout="@layout/error_lay"
-            android:id="@+id/login_error_lay"
-            android:visibility="gone" />
-
-    </FrameLayout>
-</layout>
+</FrameLayout>

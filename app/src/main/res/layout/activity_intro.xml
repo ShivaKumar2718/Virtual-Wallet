@@ -1,79 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/intro"
+    tools:context=".IntroActivity">
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/intro"
-        tools:context=".IntroActivity">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/main_tv"
+            style="@style/main_textview_style"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:text="@string/know_the_name" />
+
+        <com.siva.virtual.util.CustomEdittext
+            android:id="@+id/et_name"
+            style="@style/et_answer"
+            android:layout_below="@+id/main_tv"
+            android:layout_marginStart="35dp"
+            android:maxLines="1"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="35dp"
+            android:hint="@string/name"
+            android:maxLength="11" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/policy_lay"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_name"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/main_tv"
-                style="@style/main_textview_style"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="sans-serif"
-                android:text="@string/know_the_name" />
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/agree_check"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="40dp" />
 
-            <com.siva.virtual.util.CustomEdittext
-                android:id="@+id/et_name"
-                style="@style/et_answer"
-                android:layout_below="@+id/main_tv"
-                android:layout_marginStart="35dp"
-                android:maxLines="1"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="35dp"
-                android:hint="@string/name"
-                android:maxLength="11" />
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/policy_lay"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tv_policy"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/et_name"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:layout_marginStart="5dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/agree_to_our_privacy_policy"
+                android:textColor="#393939"
+                android:textSize="16sp" />
 
-                <androidx.appcompat.widget.AppCompatCheckBox
-                    android:id="@+id/agree_check"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="40dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <TextView
-                    android:id="@+id/tv_policy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:fontFamily="sans-serif-light"
-                    android:text="@string/agree_to_our_privacy_policy"
-                    android:textColor="#393939"
-                    android:textSize="16sp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_done"
+            style="@style/button_style"
+            android:enabled="false"
+            android:layout_below="@+id/policy_lay"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="35dp"
+            android:text="@string/done"
+            android:focusable="true" />
+    </RelativeLayout>
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+    <include
+        layout="@layout/error_lay"
+        android:id="@+id/intro_error_lay"
+        android:visibility="gone" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_done"
-                style="@style/button_style"
-                android:enabled="false"
-                android:layout_below="@+id/policy_lay"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="35dp"
-                android:text="@string/done"
-                android:focusable="true" />
-        </RelativeLayout>
 
-        <include
-            layout="@layout/error_lay"
-            android:id="@+id/intro_error_lay"
-            android:visibility="gone" />
-
-    </FrameLayout>
-</layout>
+</FrameLayout>

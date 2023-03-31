@@ -1,98 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PinSetUpActivity">
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".PinSetUpActivity">
+        android:id="@+id/pin_set_lay"
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_setup"
+            style="@style/main_textview_style"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="100dp"
+            android:text="@string/setup_pin" />
+
+        <FrameLayout
+            android:id="@+id/frame"
             android:layout_width="match_parent"
-            android:id="@+id/pin_set_lay"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_setup"
+            android:layout_marginTop="30dp">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_setup"
-                style="@style/main_textview_style"
-                android:layout_alignParentTop="true"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="100dp"
-                android:text="@string/setup_pin" />
-
-            <FrameLayout
-                android:id="@+id/frame"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/set_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_setup"
-                android:layout_marginTop="30dp">
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/set_layout"
-                    android:layout_width="match_parent"
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/child_textview_style"
+                    android:text="@string/set_pin" />
+
+                <com.chaos.view.PinView
+                    android:id="@+id/pinView_set"
+                    style="@style/PinWidget.PinView"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/light_grey"
+                    android:inputType="numberPassword"
+                    android:contentDescription="@string/set_pin_here"
+                    android:itemBackground="@color/white"
+                    app:cursorColor="@color/blue_light_1"
+                    app:itemRadius="6dp"
+                    app:itemSpacing="20dp"
+                    app:lineColor="@color/blue_light_1" />
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        style="@style/child_textview_style"
-                        android:text="@string/set_pin" />
-
-                    <com.chaos.view.PinView
-                        android:id="@+id/pinView_set"
-                        style="@style/PinWidget.PinView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:textColor="@color/light_grey"
-                        android:inputType="numberPassword"
-                        android:contentDescription="@string/set_pin_here"
-                        android:itemBackground="@color/white"
-                        app:cursorColor="@color/blue_light_1"
-                        app:itemRadius="6dp"
-                        app:itemSpacing="20dp"
-                        app:lineColor="@color/blue_light_1" />
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:id="@+id/confirm_layout"
-                    android:layout_width="match_parent"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/confirm_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_confirm"
+                    style="@style/child_textview_style"
+                    android:text="@string/confirm_pin" />
+
+                <com.chaos.view.PinView
+                    android:id="@+id/pinView_confirm"
+                    style="@style/PinWidget.PinView"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                    android:textColor="@color/light_grey"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="@string/confirm_pin_here"
+                    android:inputType="numberPassword"
+                    android:itemBackground="@color/white"
+                    app:cursorColor="@color/blue_light_1"
+                    app:itemRadius="6dp"
+                    app:itemSpacing="20dp"
+                    app:lineColor="@color/blue_light_1" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tv_confirm"
-                        style="@style/child_textview_style"
-                        android:text="@string/confirm_pin" />
+        </FrameLayout>
 
-                    <com.chaos.view.PinView
-                        android:id="@+id/pinView_confirm"
-                        style="@style/PinWidget.PinView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/light_grey"
-                        android:layout_marginTop="20dp"
-                        android:contentDescription="@string/confirm_pin_here"
-                        android:inputType="numberPassword"
-                        android:itemBackground="@color/white"
-                        app:cursorColor="@color/blue_light_1"
-                        app:itemRadius="6dp"
-                        app:itemSpacing="20dp"
-                        app:lineColor="@color/blue_light_1" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
 
-            </FrameLayout>
+    <include
+        layout="@layout/error_lay"
+        android:id="@+id/set_error_lay"
+        android:visibility="gone" />
 
-        </RelativeLayout>
-
-        <include
-            layout="@layout/error_lay"
-            android:id="@+id/set_error_lay"
-            android:visibility="gone" />
-
-    </FrameLayout>
-</layout>
+</FrameLayout>
