@@ -24,6 +24,8 @@ class ImageViewModel(private val imageDao: ImageDao) : ViewModel() {
     }
 
     fun insertImage(image: Images?)=viewModelScope.launch(Dispatchers.IO) {
-        imageDao.insert(image)
+        if (image != null) {
+            imageDao.insert(image)
+        }
     }
 }

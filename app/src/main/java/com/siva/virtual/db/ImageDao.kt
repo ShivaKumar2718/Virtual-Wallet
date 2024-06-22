@@ -5,13 +5,12 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.siva.virtual.db.Images
 import java.util.*
 
 @Dao
 interface ImageDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insert(images: Images?)
+    fun insert(images: Images)
 
     @Query("UPDATE image_table SET created_date=:date WHERE file_id = :id")
     fun updateCreatedTime(date: Date, id: Int)

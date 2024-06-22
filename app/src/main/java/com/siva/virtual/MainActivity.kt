@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         ArrayList()
     private lateinit var imageViewModel: ImageViewModel
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
         ActivityCompat.finishAffinity(this@MainActivity)
