@@ -18,7 +18,7 @@
             android:fontFamily="sans-serif"
             android:text="@string/know_the_name" />
 
-        <com.siva.virtual.util.CustomEdittext
+        <com.siva.virtualWallet.util.CustomEdittext
             android:id="@+id/et_name"
             style="@style/et_answer"
             android:layout_below="@+id/main_tv"

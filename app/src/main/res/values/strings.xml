@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Virtual</string>
+    <string name="app_name">Virtual Wallet</string>
     <string name="Todo">PinView</string>
     <string name="forgot_pin">Forgot Pin? Reset here…</string>
     <string name="virtual">Virtual</string>
